@@ -1,0 +1,29 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">S.I.S</h1>
+      <p class="text-center lead">Crie ou edite seu contato abaixo.</p>
+
+      <form action="/alunos/salvo" method="POST">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" class="form-control" name="aluno">
+        </div>
+        <div class="form-group">
+          <label>RA</label>
+          <input type="text" class="form-control" name="ra">
+        </div>
+        <button type="submit" class="btn btn-dark">Inserir</button>
+      </form>
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

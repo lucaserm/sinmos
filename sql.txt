@@ -1,0 +1,16 @@
+create table alunos(
+    ra int not null,
+    nome varchar not null,
+    entrada timestamptz,
+    saida timestamptz,
+    id serial primary key
+);
+
+insert into alunos values(040903, 'Lucas', CURRENT_TIMESTAMP);
+insert into alunos values(041001, 'Samuel', CURRENT_TIMESTAMP);
+
+select * from alunos order by id;
+delete from alunos where id = 2;
+update alunos set nome = João where nome = 'Samuel';
+
+drop table alunos;
