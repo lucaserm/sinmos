@@ -1,9 +1,7 @@
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const { Client, Pool } = require('pg');
-
 const client = new Client({
     user: process.env.user,
     password: process.env.password,
@@ -12,7 +10,6 @@ const client = new Client({
     database: process.env.database
 });
 module.exports = client;
-
 client.connect()
     .then(() => {
         console.log('Conectei à base de dados.');
@@ -20,7 +17,6 @@ client.connect()
     })
     .catch(e => console.log(e));
 const flash = require('connect-flash');
-
 const routes = require('./routes');
 const path = require('path');
 const { middlewareGlobal } = require('./src/middlewares/middleware');
@@ -33,7 +29,6 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
-// Nossos próprios middlewares
 app.use(middlewareGlobal);
 app.use(routes);
 

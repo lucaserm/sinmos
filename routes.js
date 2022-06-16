@@ -18,6 +18,6 @@ route.post('/alunos/salvo', alunoController.trataPost);
 //Login do Administrador
 route.get('/administracao/login', administracaoController.login);
 //Horários de todos os alunos cadastrados
-route.get('/administracao/paginaalunos', administracaoController.paginaAlunos);
+route.post('/administracao/paginaalunos', administracaoController.paginaAlunos);
 
 module.exports = route;

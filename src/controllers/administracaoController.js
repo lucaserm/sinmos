@@ -5,7 +5,7 @@ exports.login = (req, res) => {
 };
 
 exports.paginaAlunos = async(req, res) => {
-    if(req._parsedUrl.search !== '?nome_acesso=root&senha=123456'){
+    if(req.body.nome_acesso !== 'root' && req.body.senha !== '123456'){
         res.render('index');
     }else{
         const alunos = await Aluno.buscaAlunos();

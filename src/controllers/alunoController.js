@@ -1,7 +1,6 @@
 const Aluno = require('../models/AlunoModel');
 
 exports.paginaEntrada = (req, res) => {
-    console.log(req.url)
     res.render('entrada');
 };
 exports.paginaSaida = (req, res) => {
@@ -11,7 +10,7 @@ exports.paginaSaida = (req, res) => {
 exports.trataPost = async(req, res) => {
     if(req.url == '/alunos/entrada'){
         Aluno.registraEntrada(req.body);
-    }else {
+    }else if(req.url == '/alunos/saida'){
         Aluno.registraSaida(req.body);
     }
     res.render('salvo');

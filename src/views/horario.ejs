@@ -1,10 +1,8 @@
 <%- include('includes/head') %>
 <%- include('includes/nav') %>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-2"></div>
-
     <div class="col-lg-8 my-3">
       <h1 class="text-center">Horários</h1>
       <p class="text-center lead">Seus dados estão abaixo</p>
@@ -12,18 +10,12 @@
       <div class="responsive-table">
         <table class="table my-3" color>
           <tr>
-            <td>Id</td>
-            <td>Nome</td>
-            <td>RA</td>
-            <td>Entrada</td>
-            <td>Saída</td>
+            <td>Id</td><td>Nome</td><td>RA</td><td>Entrada</td><td>Saída</td>
           </tr>
           <% alunos.forEach(aluno => { %>
           <tr>
-            <td><%= aluno.id%></td>
-            <td><%= aluno.nome%></td>
-            <td><%= aluno.ra%></td>
-            <td><%= aluno.entrada%></td>
+            <td><%= aluno.id%></td><td><%= aluno.nome%></td>
+            <td><%= aluno.ra%></td><td><%= aluno.entrada%></td>
             <td><%= aluno.saida%></td>
           </tr>
           <% }); %>
@@ -45,5 +37,4 @@
     <div class="col-lg-2"></div>
   </div>
 </div>
-
 <%- include('includes/footer');%>
