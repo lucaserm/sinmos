@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "^5.2.0-beta1",
     "connect-flash": "^0.1.1",
     "connect-pg": "^1.1.5",
